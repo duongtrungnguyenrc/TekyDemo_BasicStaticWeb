@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="data:image/png;base64,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" type="image/x-icon">
+    <title>VNTRAVEL - Welcome to Viet Nam</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../../fontawesome-free-6.2.0-web/css/all.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div id="frame">
+        <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand text-white" href="#">VNTRAVEL</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Khách sạn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Chuyến bay</a>
+                    </li>
+                </ul>
+                <a class="btn btn-success" href=".././login/" type="submit" id="login-btn">Đăng nhập</a>
+              </div>
+            </div>
+        </nav>
+
+        <section class="slider-site">
+            <div id="slider" class="w-100 h-100">
+                <div class="item" style="background-image: url(../../pic/img1.jpg)">
+                    <div class="contents">
+                        <h1 class="header">Sugar:</h1>
+                        <p class="describe">Một hai ba bốn hai ba một ,...</p>
+                        <button>see more</button>
+                    </div>
+                </div>
+    
+                <div class="item" style="background-image: url(../../pic/img2.jpg)">
+                    <div class="contents">
+                        <h1 class="header">Sugar:</h1>
+                        <p class="describe">Một hai ba bốn hai ba một ,...</p>
+                        <button id="more">see more</button>
+                    </div>
+                </div>
+        
+                <div class="item" style="background-image: url(../../pic/img3.jpg)">
+                    <div class="contents">
+                        <h1 class="header">Băng tuyết</h1>
+                        <p class="describe">Một hai ba bốn hai ba một ,...</p>
+                        <button>see more</button>
+                    </div>
+                </div>
+        
+                <div class="item" style="background-image: url(../../pic/img4.jpg)">
+                    <div class="contents">
+                        <h1 class="header">Rừng Thông</h1>
+                        <p class="describe">Núi đồi mênh mông nhưng không bằng được chuột tui</p>
+                        <button>see more</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="control-buttons">
+                <button id="prev"><i class="fa-solid fa-arrow-left"></i></button>
+                <button id="next"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </section>
+
+        <section id="main-content" class="container-fluid p-5">
+            
+            <div class="trend container-fluid d-flex flex-column">
+                <div class="content-header mb-4">
+                    <h1>Popular destinations</h1>
+                    <p>Vacations to make your experience enjoyable in Viet Nam!</p>
+                </div>
+                <div class="card-list">
+                    <div class="card p-2">
+                        <img class="card-img-top rounded-2" src="../../pic/img3.jpg" alt="Card image">
+                        <div class="card-body p-0 pt-3 py-2">
+                            <p class="location mb-1"><i class="fa-sharp fa-solid fa-location-dot"></i>  Dao Phu Quy - Binh Thuan</p>
+                            <h4 class="card-title mb-1">Binh Hung tour 3N2D</h4>
+                            <p class="card-text mb-1">Some example text.</p>
+                            <p href="#" class="price mb-0">400000đ / ngày</p>
+                        </div>
+                    </div>
+                    <div class="card p-2">
+                        <img class="card-img-top rounded-2" src="../../pic/img3.jpg" alt="Card image">
+                        <div class="card-body p-0 pt-3 py-2">
+                            <p class="location mb-1"><i class="fa-sharp fa-solid fa-location-dot"></i>  Dao Phu Quy - Binh Thuan</p>
+                            <h4 class="card-title mb-1">Binh Hung tour 3N2D</h4>
+                            <p class="card-text mb-1">Some example text.</p>
+                            <p href="#" class="price mb-0">400000đ / ngày</p>
+                        </div>
+                    </div>
+                    <div class="card p-2">
+                        <img class="card-img-top rounded-2" src="../../pic/img3.jpg" alt="Card image">
+                        <div class="card-body p-0 pt-3 py-2">
+                            <p class="location mb-1"><i class="fa-sharp fa-solid fa-location-dot"></i>  Dao Phu Quy - Binh Thuan</p>
+                            <h4 class="card-title mb-1">Binh Hung tour 3N2D</h4>
+                            <p class="card-text mb-1">Some example text.</p>
+                            <p href="#" class="price mb-0">400000đ / ngày</p>
+                        </div>
+                    </div>
+                    <div class="card p-2">
+                        <img class="card-img-top rounded-2" src="../../pic/img3.jpg" alt="Card image">
+                        <div class="card-body p-0 pt-3 py-2">
+                            <p class="location mb-1"><i class="fa-sharp fa-solid fa-location-dot"></i>  Dao Phu Quy - Binh Thuan</p>
+                            <h4 class="card-title mb-1">Binh Hung tour 3N2D</h4>
+                            <p class="card-text mb-1">Some example text.</p>
+                            <p href="#" class="price mb-0">400000đ / ngày</p>
+                        </div>
+                    </div>
+                    <div class="card p-2">
+                        <img class="card-img-top rounded-2" src="../../pic/img3.jpg" alt="Card image">
+                        <div class="card-body p-0 pt-3 py-2">
+                            <p class="location mb-1"><i class="fa-sharp fa-solid fa-location-dot"></i>  Dao Phu Quy - Binh Thuan</p>
+                            <h4 class="card-title mb-1">Binh Hung tour 3N2D</h4>
+                            <p class="card-text mb-1">Some example text.</p>
+                            <p href="#" class="price mb-0">400000đ / ngày</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero container-fluid d-flex">
+                <div class="hero-content col-6">
+                    <h1>The best website</h1>
+                    <h2 class="mb-3">for tourist</h2>
+                    <p>Với giao diện thân thiện và dễ sử dụng, VNTRAVEL giúp khách hàng dễ dàng tìm kiếm thông tin và đặt chỗ cho chuyến du lịch của mình một cách nhanh chóng và tiện lợi.</p>
+                </div>
+                <div class="illus col-6 d-flex">
+                    <div class="gallery">
+                        <div class="gallery-container w-100 h-100 position-inherit">
+                            <div class="bg-circle"></div>
+                            <div class="bg-circle"></div>
+                            <div class="bg-circle"></div>
+                            <img class="gallery-img" src="../../pic//hero-img.png" alt="">
+                        </div>
+                        <div class="plane">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                                <path d="M6.72127 17.5783L8.38794 17.5783L12.5546 10.9117L17.1379 10.9117C17.8296 10.9117 18.3879 10.3533 18.3879 9.66166C18.3879 8.96999 17.8296 8.41166 17.1379 8.41166L12.5546 8.41166L8.38794 1.74499L6.72127 1.74499L8.80461 8.41166L4.22128 8.41166L2.97128 6.74499L1.72128 6.74499L2.55461 9.66166L1.72127 12.5783L2.97127 12.5783L4.22127 10.9117L8.80461 10.9117L6.72127 17.5783Z" fill="#42A7C3"/>
+                            </svg>
+                            Ha Noi - Viet Nam
+                        </div>
+                        <div class="train">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                                <path d="M4.31519 20.578H21.6485" stroke="#B05D33"/>
+                                <path d="M2.74607 21.646C2.61589 21.7727 2.61589 21.978 2.74607 22.1047C2.87625 22.2313 3.0873 22.2313 3.21747 22.1047L2.74607 21.646ZM7.88417 17.5641C8.0143 17.4375 8.0143 17.2321 7.88417 17.1055C7.75397 16.9788 7.54291 16.9788 7.41274 17.1055L7.88417 17.5641ZM3.21747 22.1047L7.88417 17.5641L7.41274 17.1055L2.74607 21.646L3.21747 22.1047Z" fill="#D67B4D"/>
+                                <path d="M2.74607 21.646C2.61589 21.7727 2.61589 21.978 2.74607 22.1047C2.87625 22.2313 3.0873 22.2313 3.21747 22.1047L2.74607 21.646ZM7.88417 17.5641C8.0143 17.4375 8.0143 17.2321 7.88417 17.1055C7.75397 16.9788 7.54291 16.9788 7.41274 17.1055L7.88417 17.5641ZM3.21747 22.1047L7.88417 17.5641L7.41274 17.1055L2.74607 21.646L3.21747 22.1047Z" fill="#D67B4D"/>
+                                <path d="M23.2175 21.646C23.3477 21.7727 23.3477 21.978 23.2175 22.1047C23.0873 22.2313 22.8763 22.2313 22.7461 22.1047L23.2175 21.646ZM18.0794 17.5641C17.9493 17.4375 17.9493 17.2321 18.0794 17.1055C18.2096 16.9788 18.4207 16.9788 18.5509 17.1055L18.0794 17.5641ZM22.7461 22.1047L18.0794 17.5641L18.5509 17.1055L23.2175 21.646L22.7461 22.1047Z" fill="#D67B4D"/>
+                                <path d="M23.2175 21.646C23.3477 21.7727 23.3477 21.978 23.2175 22.1047C23.0873 22.2313 22.8763 22.2313 22.7461 22.1047L23.2175 21.646ZM18.0794 17.5641C17.9493 17.4375 17.9493 17.2321 18.0794 17.1055C18.2096 16.9788 18.4207 16.9788 18.5509 17.1055L18.0794 17.5641ZM22.7461 22.1047L18.0794 17.5641L18.5509 17.1055L23.2175 21.646L22.7461 22.1047Z" fill="#D67B4D"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.31519 3.22836C8.53739 3.11238 9.04852 2.74125 9.31519 2.18455C9.64852 1.48868 9.98185 1.14075 10.9819 1.14075H12.3152H14.3152C15.3152 1.14075 15.6485 1.48868 15.9819 2.18455C16.2485 2.74125 16.7597 3.11238 16.9819 3.22836H18.9819C20.0865 3.22836 20.9819 4.09958 20.9819 5.1743V13.4427C20.9819 17.0251 17.9971 19.9292 14.3152 19.9292H10.9819C7.29995 19.9292 4.31519 17.0251 4.31519 13.4427V5.1743C4.31519 4.09958 5.21062 3.22836 6.31519 3.22836H8.31519Z" fill="#42A8C3"/>
+                                <path d="M14.3151 3.08664C14.3151 3.0098 14.2664 2.93106 14.1906 2.85548C13.8061 2.47215 13.1989 2.43799 12.6485 2.43799C12.098 2.43799 11.4691 2.44217 11.0969 2.83679C11.0265 2.91138 10.9818 2.99466 10.9818 3.08664C10.9818 3.41096 10.9818 3.73529 11.3985 3.73529H13.8985C14.3151 3.73529 14.3151 3.41096 14.3151 3.08664Z" fill="white"/>
+                                <path d="M6.98181 6.95637C6.98181 6.23988 7.57876 5.65906 8.31514 5.65906H16.9818C17.7182 5.65906 18.3151 6.23988 18.3151 6.95637V9.55096C18.3151 11.7004 16.5243 13.4429 14.3151 13.4429H10.9818C8.77268 13.4429 6.98181 11.7004 6.98181 9.55096V6.95637Z" fill="white"/>
+                                <mask id="mask0_1_5672" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="6" y="5" width="13" height="9">
+                                  <path d="M6.98181 6.95637C6.98181 6.23988 7.57876 5.65906 8.31514 5.65906H16.9818C17.7182 5.65906 18.3151 6.23988 18.3151 6.95637V9.55096C18.3151 11.7004 16.5243 13.4429 14.3151 13.4429H10.9818C8.77268 13.4429 6.98181 11.7004 6.98181 9.55096V6.95637Z" fill="white"/>
+                                </mask>
+                                <g mask="url(#mask0_1_5672)">
+                                  <path d="M17.3154 6.63203C17.3154 5.85365 16.0932 5.65906 15.3155 5.65906H18.3155L18.3154 13.7672C16.0932 13.8752 9.9154 13.7672 10.9821 13.7672C12.3154 13.7672 14.6487 12.7942 15.6488 12.1456C16.5636 11.5522 17.3155 10.5239 17.3154 9.55096V6.63203Z" fill="#C3D3DB"/>
+                                </g>
+                              </svg>
+                        </div>
+                        </div>
+                    <div class="spinner-gallery">
+                        <div class="spinner-slider">
+                            <div class="card spin-item">
+                                <img class="card-img-top" src="../../pic/img1.jpg" alt="Card image">
+                                <div class="card-body p-2 py-3">
+                                    <h4 class="card-title mb-0">Binh Hung tour 3N2D</h4>
+                                    <p class="location mb-1"><i class="fa-sharp fa-solid fa-location-dot"></i>  Dao Phu Quy</p>
+                                </div>
+                            </div>
+                            <div class="card spin-item">
+                                <img class="card-img-top" src="../../pic/img2.jpg" alt="Card image">
+                                <div class="card-body p-2 py-2">
+                                    <h4 class="card-title mb-0">Ha Long tour 3N2D</h4>
+                                    <p class="location mb-1"><i class="fa-sharp fa-solid fa-location-dot"></i>  Dao Phu Quy</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+
+            <div class="world container-fluid d-flex"></div>
+            
+            <div class="hero container-fluid d-flex">
+                <div class="illus col-6 d-flex">
+                    <div class="gallery">
+                        <div class="gallery-container w-100 h-100 position-inherit">
+                            <div class="bg-circle"></div>
+                            <div class="bg-circle"></div>
+                            <div class="bg-circle"></div>
+                            <img class="gallery-img" src="../../pic//hero-img2.png" alt="">
+                        </div>
+                        <div class="plane">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                                <path d="M6.72127 17.5783L8.38794 17.5783L12.5546 10.9117L17.1379 10.9117C17.8296 10.9117 18.3879 10.3533 18.3879 9.66166C18.3879 8.96999 17.8296 8.41166 17.1379 8.41166L12.5546 8.41166L8.38794 1.74499L6.72127 1.74499L8.80461 8.41166L4.22128 8.41166L2.97128 6.74499L1.72128 6.74499L2.55461 9.66166L1.72127 12.5783L2.97127 12.5783L4.22127 10.9117L8.80461 10.9117L6.72127 17.5783Z" fill="#42A7C3"/>
+                            </svg>
+                            Ha Noi - Viet Nam
+                        </div>
+                        <div class="train">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                                <path d="M4.31519 20.578H21.6485" stroke="#B05D33"/>
+                                <path d="M2.74607 21.646C2.61589 21.7727 2.61589 21.978 2.74607 22.1047C2.87625 22.2313 3.0873 22.2313 3.21747 22.1047L2.74607 21.646ZM7.88417 17.5641C8.0143 17.4375 8.0143 17.2321 7.88417 17.1055C7.75397 16.9788 7.54291 16.9788 7.41274 17.1055L7.88417 17.5641ZM3.21747 22.1047L7.88417 17.5641L7.41274 17.1055L2.74607 21.646L3.21747 22.1047Z" fill="#D67B4D"/>
+                                <path d="M2.74607 21.646C2.61589 21.7727 2.61589 21.978 2.74607 22.1047C2.87625 22.2313 3.0873 22.2313 3.21747 22.1047L2.74607 21.646ZM7.88417 17.5641C8.0143 17.4375 8.0143 17.2321 7.88417 17.1055C7.75397 16.9788 7.54291 16.9788 7.41274 17.1055L7.88417 17.5641ZM3.21747 22.1047L7.88417 17.5641L7.41274 17.1055L2.74607 21.646L3.21747 22.1047Z" fill="#D67B4D"/>
+                                <path d="M23.2175 21.646C23.3477 21.7727 23.3477 21.978 23.2175 22.1047C23.0873 22.2313 22.8763 22.2313 22.7461 22.1047L23.2175 21.646ZM18.0794 17.5641C17.9493 17.4375 17.9493 17.2321 18.0794 17.1055C18.2096 16.9788 18.4207 16.9788 18.5509 17.1055L18.0794 17.5641ZM22.7461 22.1047L18.0794 17.5641L18.5509 17.1055L23.2175 21.646L22.7461 22.1047Z" fill="#D67B4D"/>
+                                <path d="M23.2175 21.646C23.3477 21.7727 23.3477 21.978 23.2175 22.1047C23.0873 22.2313 22.8763 22.2313 22.7461 22.1047L23.2175 21.646ZM18.0794 17.5641C17.9493 17.4375 17.9493 17.2321 18.0794 17.1055C18.2096 16.9788 18.4207 16.9788 18.5509 17.1055L18.0794 17.5641ZM22.7461 22.1047L18.0794 17.5641L18.5509 17.1055L23.2175 21.646L22.7461 22.1047Z" fill="#D67B4D"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.31519 3.22836C8.53739 3.11238 9.04852 2.74125 9.31519 2.18455C9.64852 1.48868 9.98185 1.14075 10.9819 1.14075H12.3152H14.3152C15.3152 1.14075 15.6485 1.48868 15.9819 2.18455C16.2485 2.74125 16.7597 3.11238 16.9819 3.22836H18.9819C20.0865 3.22836 20.9819 4.09958 20.9819 5.1743V13.4427C20.9819 17.0251 17.9971 19.9292 14.3152 19.9292H10.9819C7.29995 19.9292 4.31519 17.0251 4.31519 13.4427V5.1743C4.31519 4.09958 5.21062 3.22836 6.31519 3.22836H8.31519Z" fill="#42A8C3"/>
+                                <path d="M14.3151 3.08664C14.3151 3.0098 14.2664 2.93106 14.1906 2.85548C13.8061 2.47215 13.1989 2.43799 12.6485 2.43799C12.098 2.43799 11.4691 2.44217 11.0969 2.83679C11.0265 2.91138 10.9818 2.99466 10.9818 3.08664C10.9818 3.41096 10.9818 3.73529 11.3985 3.73529H13.8985C14.3151 3.73529 14.3151 3.41096 14.3151 3.08664Z" fill="white"/>
+                                <path d="M6.98181 6.95637C6.98181 6.23988 7.57876 5.65906 8.31514 5.65906H16.9818C17.7182 5.65906 18.3151 6.23988 18.3151 6.95637V9.55096C18.3151 11.7004 16.5243 13.4429 14.3151 13.4429H10.9818C8.77268 13.4429 6.98181 11.7004 6.98181 9.55096V6.95637Z" fill="white"/>
+                                <mask id="mask0_1_5672" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="6" y="5" width="13" height="9">
+                                  <path d="M6.98181 6.95637C6.98181 6.23988 7.57876 5.65906 8.31514 5.65906H16.9818C17.7182 5.65906 18.3151 6.23988 18.3151 6.95637V9.55096C18.3151 11.7004 16.5243 13.4429 14.3151 13.4429H10.9818C8.77268 13.4429 6.98181 11.7004 6.98181 9.55096V6.95637Z" fill="white"/>
+                                </mask>
+                                <g mask="url(#mask0_1_5672)">
+                                  <path d="M17.3154 6.63203C17.3154 5.85365 16.0932 5.65906 15.3155 5.65906H18.3155L18.3154 13.7672C16.0932 13.8752 9.9154 13.7672 10.9821 13.7672C12.3154 13.7672 14.6487 12.7942 15.6488 12.1456C16.5636 11.5522 17.3155 10.5239 17.3154 9.55096V6.63203Z" fill="#C3D3DB"/>
+                                </g>
+                              </svg>
+                        </div>
+                        </div>
+                    <div class="spinner-gallery">
+                        <div class="spinner-slider">
+                            <div class="card spin-item">
+                                <img class="card-img-top" src="../../pic/img1.jpg" alt="Card image">
+                                <div class="card-body p-2 py-3">
+                                    <h4 class="card-title mb-0">Binh Hung tour 3N2D</h4>
+                                    <p class="location mb-1"><i class="fa-sharp fa-solid fa-location-dot"></i>  Dao Phu Quy</p>
+                                </div>
+                            </div>
+                            <div class="card spin-item">
+                                <img class="card-img-top" src="../../pic/img2.jpg" alt="Card image">
+                                <div class="card-body p-2 py-2">
+                                    <h4 class="card-title mb-0">Binh Hung tour 3N2D</h4>
+                                    <p class="location mb-1"><i class="fa-sharp fa-solid fa-location-dot"></i>  Dao Phu Quy</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="hero-content col-6">
+                    <h1>The best website</h1>
+                    <h2 class="mb-3">for tourist</h2>
+                    <p>Với giao diện thân thiện và dễ sử dụng, VNTRAVEL giúp khách hàng dễ dàng tìm kiếm thông tin và đặt chỗ cho chuyến du lịch của mình một cách nhanh chóng và tiện lợi.</p>
+                </div>
+                
+            </div>
+        </section>
+
+        <footer
+            class="text-center text-lg-start text-dark"
+            style="background-color: #ECEFF1"
+            >
+            <!-- Section: Social media -->
+            <div
+                class="d-flex justify-content-between p-4 text-white"
+                style="background-color: #21D192"
+                >
+            <!-- Left -->
+            <div class="me-5">
+            <span>Get connected with us on social networks:</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+            <a href="" class="text-white me-4">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="" class="text-white me-4">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="" class="text-white me-4">
+                <i class="fab fa-google"></i>
+            </a>
+            <a href="" class="text-white me-4">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="" class="text-white me-4">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="" class="text-white me-4">
+                <i class="fab fa-github"></i>
+            </a>
+            </div>
+            <!-- Right -->
+            </div>
+            <div class="">
+                <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <!-- Content -->
+                    <h6 class="text-uppercase fw-bold">VNTRAVEL</h6>
+                    <hr
+                        class="mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 60px; background-color: #7c4dff; height: 2px"
+                        />
+                    <p>
+                        Here you can use rows and columns to organize your footer
+                        content. Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit.
+                    </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold">Products</h6>
+                    <hr
+                        class="mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 60px; background-color: #7c4dff; height: 2px"
+                        />
+                    <p>
+                        <a href="#!" class="text-dark">MDBootstrap</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-dark">MDWordPress</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-dark">BrandFlow</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-dark">Bootstrap Angular</a>
+                    </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold">Useful links</h6>
+                    <hr
+                        class="mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 60px; background-color: #7c4dff; height: 2px"
+                        />
+                    <p>
+                        <a href="#!" class="text-dark">Your Account</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-dark">Become an Affiliate</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-dark">Shipping Rates</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-dark">Help</a>
+                    </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold">Contact</h6>
+                    <hr
+                        class="mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 60px; background-color: #7c4dff; height: 2px"
+                        />
+                    <p><i class="fas fa-home mr-3"></i> District 7, Ho Chi Minh, Viet Nam</p>
+                    <p><i class="fas fa-envelope mr-3"></i> duongtrungnguyenrc@gmail.com</p>
+                    <p><i class="fas fa-phone mr-3"></i> +84 855 004 714</p>
+                    <p><i class="fas fa-print mr-3"></i> +01 234 567 89</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+                </div>
+            </div>
+            <!-- Section: Links  -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                &copy; 2023 Copyright: <a class="text-dark" href="">VNTRAVEL.com</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
