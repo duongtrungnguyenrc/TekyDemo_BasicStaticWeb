@@ -15,14 +15,33 @@ html {
 body {
     width: 100%;
     height: 100vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
-#frame {
+#root {
     height: 100%;
+    scroll-behavior: smooth;
+
+}
+
+#on-top-btn {
+    right: 10px;
+    bottom: 10px;
+    z-index: 9999;
+    opacity: 0;
+    transition: 0.5s;
+    pointer-events: none;
 }
 
 #navbar {
     transition: 1s;
+    backdrop-filter: blur(20px);
+}
+
+#navbar .navbar-container {
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 .navbar-brand {
@@ -30,25 +49,28 @@ body {
     font-size: 2rem!important;
 }
 
+.navbar-nav {
+    gap: 8px;
+}
+
 .navbar-nav li a{
     color: #fff!important;
     font-size: 1.1rem;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    line-height: 14px;
     position: relative;
+    font-weight: 550;
 }
 
-.navbar-nav li a.active::before{
+.navbar-nav li a:hover::before{
     content: '';
-    width: 100px;
+    width: 100%;
     height: 3px;
+    left: -0px;
     display: block;
     background-color: rgb(0, 115, 255);
     position: absolute;
     bottom: 0;
-}
-
-.navbar-nav li a.active:hover{
-    color: #000;
 }
 
 .navbar-nav li ul li a{
@@ -61,8 +83,10 @@ body {
     background-color: aliceblue;
 }
 
+/*  */
+
 #slider {
-    overflow: hidden;
+    position: relative;
 }
 
 .item{
@@ -74,7 +98,7 @@ body {
     background-position: 50% 50%;
     display: inline-block;
     background-size: cover;
-    transition: 1s;
+    transition: 1.5s;
     border-radius: 20px;
     box-shadow:5px 5px 5px rgb(120, 117, 117);
     cursor: pointer;
@@ -111,7 +135,7 @@ body {
     top: 50%;
     left: 60px;
     transform: translate(0%, -50%);
-    width: 400px;
+    width: 700px;
     height: 200px;
     text-align: left;
     display: none;
@@ -126,6 +150,7 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-bottom: 10px;
     font-size: 4rem!important;
+    font-weight: 800;
     animation: showContent 1.7s;
 }
 
@@ -175,9 +200,9 @@ body {
     }
 }
 
+/*  */
 
 #main-content {
-    background: linear-gradient(180deg, #E2F6FC 20%, rgba(255, 255, 255, 0.00) 100%);    
     height: max-content;
     flex-shrink: 0;
 }
@@ -285,6 +310,7 @@ body {
     z-index: 1;
     filter: blur(3px);
     background: linear-gradient(315deg, #FFA679 0%, #FA8443 75.03%);
+    animation: flashOff 2s infinite;
 }
 
 
@@ -300,6 +326,7 @@ body {
     filter: blur(3px);
     z-index: 1;
     background: linear-gradient(315deg, #FFA679 0%, #FA8443 75.03%);
+    animation: flashOff 2s infinite;
 }
 
 #main-content .hero .illus .gallery .plane{
@@ -321,10 +348,6 @@ body {
     padding: 10px;
     font-size: 0.8rem;
 }
-
-/*  */
-
-
 
 /*  */
 
@@ -354,11 +377,11 @@ body {
 } 
 
 #main-content .hero .illus .spinner-gallery .spinner-slider:hover .card.card.spin-item:nth-child(1) {
-    animation: revertZoomOutSpinner 10s
+    animation: reverseSpinner 10s, zoomOut 10s
 } 
 
 #main-content .hero .illus .spinner-gallery .spinner-slider:hover .card.card.spin-item:nth-child(2) {
-    animation: revertZoomInSpinner 10s
+    animation: reverseSpinner 10s, zoomIn 10s
 } 
 
 @keyframes spinner {
@@ -370,29 +393,26 @@ body {
     }
 }
 
-@keyframes revertZoomInSpinner {
-    0% {
+@keyframes reverseSpinner {
+    from {
         transform: rotate(0deg);
     }
-    25% {
-        width: 250px;
-        height: 200px;
-    }
-    100%{
+    to {
         transform: rotate(-360deg);
     }
 }
 
-@keyframes revertZoomOutSpinner {
-    0% {
-        transform: rotate(0deg);
+@keyframes zoomIn {
+    25% {
+        width: 250px;
+        height: 200px;
     }
+}
+
+@keyframes zoomOut {
     25% {
         width: 200px;
         height: 150px;
-    }
-    100%{
-        transform: rotate(-360deg);
     }
 }
 
@@ -450,19 +470,116 @@ body {
    color: #42A8C3;
 }
 
+
 /*  */
 
+#main-content .services .services-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#main-content .services .services-content h1{
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0;
+    animation: showContent 1s ease-in-out;
+}
+
+#main-content .services .services-content p{
+    animation: showContent 2s ease-in-out;
+    color: grey;
+}
+
+#main-content .services .services-content p b{
+    color: #000;
+    text-transform: capitalize;
+}
+
+
+#main-content .services .services-content {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+#main-content .services .services-content .services-list .service{
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 16px 24px 0px rgba(96, 97, 112, 0.12), 0px 2px 8px 0px rgba(40, 41, 61, 0.02);
+    cursor: pointer;
+    transition: 1s;
+}
+
+#main-content .services .services-content .services-list .service:hover{
+    transform: scale(1.05);
+}
+
+#main-content .services .illus {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: 1s;
+    transform: scale(1.15);
+}
+
+#main-content .services .illus::before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 650px;
+    height:650px;
+    border-radius: 37% 63% 69% 31% / 37% 38% 62% 63% ;
+    background: linear-gradient(#caf3f9, #ebe1f4, #fae5f2, #ebead7); ;
+    filter: blur(25px);    
+    z-index: -99999;
+    animation: spinner 15s infinite;
+}
+
+#main-content .services .illus .gallery{
+    display: flex;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    border-radius: 50%;
+    transition: 1s;
+    position: relative;
+    background-color: #e6f4f8;
+}
+
+#main-content .services .illus .gallery .gallery-img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+    z-index: 2;
+    bottom: -30px;
+}
+
+/*  */
+
+#main-content .trend .content-header {
+    text-align: center;
+}
+
 #main-content .trend .content-header h1{
-   font-weight: 800;
+    font-family:var(--lato);
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize;
 }
 
 #main-content .trend .content-header p{
-    font-size: 14px;
+    font-size: 16px;
     color: #636363;
  }
 
 #main-content .trend .card-list{
     display: flex;
+    justify-content: center;
     gap: 30px;
 }
 
@@ -470,16 +587,16 @@ body {
     min-width: 15%;
     width: 20%;
     border-radius: 16px;
-    border: 1px solid #FFF;
-    background: rgba(240, 240, 240, 0.45);
     backdrop-filter: blur(2px);
     cursor: pointer;
     transition: 0.5s;
+    height: 475px;
+    box-shadow: 0px 1.8518518209457397px 3.1481480598449707px 0px rgba(0, 0, 0, 0.00), 0px 8.148148536682129px 6.518518447875977px 0px rgba(0, 0, 0, 0.01), 0px 20px 13px 0px rgba(0, 0, 0, 0.01), 0px 38.51852035522461px 25.481481552124023px 0px rgba(0, 0, 0, 0.01), 0px 64.81481170654297px 46.85185241699219px 0px rgba(0, 0, 0, 0.02), 0px 100px 80px 0px rgba(0, 0, 0, 0.02);
 }
 
 #main-content .trend .card-list .card:hover{
     background: #fff;
-    box-shadow: 1px 1px 20px 10px #a9d3d5;
+    box-shadow: 1px 1px 20px 10px #b7bbbb;
 }
 
 
@@ -530,6 +647,36 @@ body {
 
 /*  */
 
+#main-content .video .video-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#main-content .video .video-content h1{
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin-bottom: 0;
+    width: max-content;
+    color: rgb(232, 3, 3);
+    animation: showContent 1s ease-in-out;
+}
+
+#main-content .video .video-content h1 b{
+    font-size: 4rem;
+    color: rgb(232, 232, 5);
+    font-weight: 800;
+    width: max-content;
+    animation: showContent 1.5s ease-in-out;
+}
+
+#main-content .video .video-content p{
+    animation: showContent 2s ease-in-out;
+    color: grey;
+}
+
+/*  */
+
 #main-content .world {
     height: 1300px;
     background-image: url(../../pic/word.png);
@@ -537,7 +684,25 @@ body {
     background-repeat: no-repeat;
 }
 
+/*  */
+
+
 
 footer a{
     text-decoration: none;
+}
+
+@keyframes flashOff {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .slider-site {
+        display: none;
+    }
 }

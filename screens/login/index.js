@@ -4,29 +4,35 @@ const formHeader = document.querySelector(".login-form-header");
 
 // xử lý hiển thị intro trên form đăng nhập
 function handleDisplayIntro(value) {
+    if(value.length <= 0) {
+        return;
+    }
     let i = 0;
-    let j = 1;
-    let arrayString = value[0].split("");
+    let j = 0;
+    let arrayString = value[j].split("");
     setTimeout(() => {
         const interval = setInterval(() => {
             formHeader.insertAdjacentText('beforeend', arrayString[i]);
             i++;
-            if(i >= arrayString.length) {
-                i=0;
-                arrayString = value[j];
-                j++;
+            if (i >= arrayString.length) {
+                clearInterval(interval);
                 setTimeout(() => {
-    
-                }, 2000)
-                if(j > value.length) {
-                    clearInterval(interval);
-                } else formHeader.innerHTML = "";
+                    value.length > 1 ? formHeader.innerHTML = "" : undefined;
+                    i = 0;
+                    j++;
+                    if (j < value.length) {
+                        arrayString = value[j].split("");
+                        let [, ...rest] = value;
+                        handleDisplayIntro(rest);
+                    }
+                }, 700);
             }
-        }, 100);
+        }, 120);
     }, 1000);
 }
 
 handleDisplayIntro(contentGallery);
+
 
 // xử lý đăng nhập
 
