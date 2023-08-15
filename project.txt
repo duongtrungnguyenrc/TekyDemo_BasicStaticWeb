@@ -1,0 +1,4 @@
+link project: https://github.com/duongtrungnguyenrc/TekyDemo_BasicStaticWeb.git
+cách tải:
+- đối với máy có git thì chỉ cần vào địa chỉ cần tải, gõ git clone "link project"
+- đối với máy chưa có git thì chỉ cần mở link project, chọn nút "<> code" rồi chọn mục download zip
