@@ -89,3 +89,20 @@
         transform: translate(0, 0);
     }
 }
+
+@media screen and (max-width: 480px) {
+
+    #root {
+        padding: 0;
+    }
+    #root .content {
+        display: none;
+    }
+
+    #root .login-form {
+        width: 100%;
+        height: 100%;
+        border-radius: unset;
+    }
+    
+}
